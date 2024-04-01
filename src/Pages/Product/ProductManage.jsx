@@ -11,7 +11,7 @@ const ProductManage = () => {
     return setShowModal(false)
   }
   return (
-    <div className='w-80 md:w-full h-full mx-auto border-2 bg-green-500 rounded-2xl mt-20 text-white'>
+    <div className='w-80 md:w-full h-44 mx-auto border-2 bg-green-500 rounded-2xl mt-20 text-white'>
       
      <h1 className='ffont-signature font-bold text-2xl text-center border-b border-slate-100 py-3'>Product Merge</h1>
      <div className='flex flex-col md:flex-row justify-center md:justify-around items-center md:items-center mt-5'>

@@ -21,9 +21,9 @@ const ShowMerge = ({closeModal}) => {
   
     <div className=' fixed inset-0 bg-black  backdrop-blur-sm bg-opacity-5    '>
     </div>
-      <div className='fixed top-[50%] left-[50%] max-w-40rem transform -translate-x-1/2 -translate-y-1/2 bg-green-200  py-8 px-12 border rounded-lg '>
+      <div className='fixed top-[50%] left-[50%] max-w-40rem transform -translate-x-1/2 -translate-y-1/2 bg-white  py-8 px-12 border rounded-lg '>
 
-    <div className='flex justify-center  p-4 md:p-5  border-b-2 dark:border-gray-600'>
+    <div className='flex justify-center  p-4 md:p-5  border-b-2 border-b-gray-600 dark:border-gray-600'>
         
      <h1 className='font-signature text-black font-bold text-2xl text-center '>Merge Group</h1>
      <div className='text-gray-400 bg-transparent hover:bg-white hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white' onClick={closeModal}>

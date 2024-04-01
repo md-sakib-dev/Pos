@@ -148,3 +148,37 @@ export const  Giftslip=Yup.object({
     .required('Gift number is required'),
 
 })
+export const DiscountSchema=Yup.object({
+    discount: Yup.string().required('Please select  discount'), 
+    company: Yup.string().required('Please select  company'), 
+    gender: Yup.string().required('Please select  gender'), 
+    code:  Yup.number().typeError("Serial must be a number").required("Enter serial").test('len', 'serial must be exactly 8 digits', val => val.toString().length === 6),
+})
+export const Giftcardschema=Yup.object({
+    issue: Yup.string().required('Please select  discount'), 
+    voucher: Yup.string().required('Please select  discount'),
+    voucherno: Yup.number().typeError("Serial must be a number").required("Enter voucher no").test('len', 'serial must be exactly 8 digits', val => val.toString().length === 6),
+    amount: Yup.string()
+    .matches(/^\d+(\.\d{1,2})?$/, 'Price must be a valid number with up to two decimal places')
+    .matches(/^[^,]*$/, 'Price cannot contain commas')
+    .required('Price is required'),
+    tamount:  Yup.string()
+    .matches(/^\d+(\.\d{1,2})?$/, 'Price must be a valid number with up to two decimal places')
+    .matches(/^[^,]*$/, 'Price cannot contain commas')
+    .required('Total Amount  is required'),
+    code:   Yup.number().typeError("Serial must be a number").required("Enter code").test('len', 'code must be exactly 6 digits', val => val.toString().length === 6),
+})
+
+export const walletschema= Yup.object({
+    tform: Yup.string().required('Please select  discount'), 
+    code:   Yup.number().typeError("Serial must be a number").required("Enter code").test('len', 'code must be exactly 6 digits', val => val.toString().length === 6),
+})
+export const Invoice=Yup.object({
+    from: Yup.date().typeError("Date must be a valid date").required("Enter date"),
+    to: Yup.date().typeError("Date must be a valid date").required("Enter date"),
+
+})
+export const productschema=Yup.object({
+    deliver:  Yup.string().required('Please select  a type'), 
+    deliverno: Yup.number().typeError("Serial must be a number").required("Enter code").test('len', 'code must be exactly 6 digits', val => val.toString().length === 6),
+})

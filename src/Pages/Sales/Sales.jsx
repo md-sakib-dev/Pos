@@ -6,6 +6,8 @@ import MobilePayment from './MobilePayment'
 import ShowCredit from './ShowCredit'
 import ShowGift from './ShowGift'
 import Discount from './Discount'
+import GiftCard from './GiftCard'
+import Wallet from './Wallet'
 
 const Sales = () => {
   const initialValues ={
@@ -23,6 +25,8 @@ const Sales = () => {
   })
   const [showCash,setShowCash]=useState(false)
   const[discount,setDiscount]=useState(false)
+  const[giftCard,setGiftCard]=useState(false)
+  const[wallet,setWallet]=useState(false)
   const [showCard,setShowCard]=useState(false)
  const [cardPay,setCardpay]=useState(false)
  const [mobilePay,setMobilePay]=useState(false)
@@ -59,12 +63,14 @@ const Sales = () => {
     setCreditSlip(false)
     setGiftSlip(false)
     setDiscount(false)
+    setGiftCard(false)
+    setWallet(false)
   
   }
   
     
   return (
-    <div className='max-w-screen-2xl h-full mx-auto mt-20'>
+    <div className='w-full h-full mx-auto mt-16'>
       <div className='grid md:grid-cols-[50fr,50fr] gap-1'>
       <div className='border-2 border-2xl text-black  col-span-1'>
           <div className='flex flex-col justify-between'>
@@ -249,12 +255,11 @@ const Sales = () => {
           <div className='mt-2 flex flex-col md:flex-row justify-around items-center'>
           <button onClick={()=>{setDiscount(true)}} class="text-sm px-2 py-2  bg-red-600  w-36 text-white  rounded-lg  hover:opacity-90 hover:text-black hover:bg-emerald-500 mb-1">Discount</button>
           {discount && <Discount closeModal={closeModal}/>}
-          <button onClick={()=>{setCreditSlip(true)}} class="text-sm px-2 py-2  bg-red-600  w-36 text-white  rounded-lg  hover:opacity-90 hover:text-black hover:bg-emerald-500 mb-1">Gift Card</button>
-
+          <button onClick={()=>{setGiftCard(true)}} class="text-sm px-2 py-2  bg-red-600  w-36 text-white  rounded-lg  hover:opacity-90 hover:text-black hover:bg-emerald-500 mb-1">Gift Card</button>
+           {giftCard && <GiftCard closeModal={closeModal}/>} 
           </div>
-          <button onClick={()=>{setCreditSlip(true)}} class="text-sm px-2 py-2  bg-red-600  w-36 text-white  rounded-lg  hover:opacity-90 hover:text-black hover:bg-emerald-500 mb-4">Wallet</button>
-
-
+          <button onClick={()=>{setWallet(true)}} class="text-sm px-2 py-2  bg-red-600  w-36 text-white  rounded-lg  hover:opacity-90 hover:text-black hover:bg-emerald-500 mb-4">Wallet</button>
+          {wallet && <Wallet closeModal={closeModal}/>}
             </div>
 
           </div>

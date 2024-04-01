@@ -116,7 +116,7 @@ const Sidebar = () => {
       ></div>
       <div className='w-full h-16 flex justify-center md:justify-between  items-center fixed bg-slate-50 '>
        
-        <div className='mr-20' onClick={()=>setIsOpen(true)}>
+        <div className=' mr-20' onClick={()=>setIsOpen(true)}>
 
            <CiMenuBurger size={25}/>
               </div>

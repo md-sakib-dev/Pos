@@ -24,7 +24,7 @@ const ShowCard = ({closeModal}) => {
     <div className=' fixed inset-0 bg-black  backdrop-blur-sm bg-opacity-5    '>
     </div>
       <div className='fixed top-[50%] left-[50%] max-w-40rem transform -translate-x-1/2 -translate-y-1/2 bg-white  py-8 px-12 border rounded-lg '>
-     <form className='flex flex-col justify-center md:justify-between items-center text-black mt-5 gap-8'onSubmit={handleSubmit}>
+     <form className='flex flex-col justify-center md:justify-between  text-black mt-5 gap-8'onSubmit={handleSubmit}>
      <div className='flex justify-center  p-4 md:p-5  border-b-2 dark:border-gray-600'>
         
         <h1 className='font-signature text-black font-bold text-2xl text-center '>Card Payment</h1>
